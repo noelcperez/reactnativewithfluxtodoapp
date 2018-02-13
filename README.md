@@ -36,8 +36,8 @@ And follow expo instructions to run the App on iOS/Android simulators or devices
 
 ## Built With
 
-* [React Native](https://facebook.github.io/react-native/) - React Native
-* [Redux](https://redux.js.org/) - Redux
+* [React Native](https://facebook.github.io/react-native/) - React Native Documentation
+* [Redux](https://redux.js.org/) - Redux Documentation
 * [Firebase](https://firebase.google.com/) - Google Firebase
 * [Visual Studio Code](https://code.visualstudio.com/) - IDE
 * [Native Base](https://docs.nativebase.io) - Component Suite
