@@ -17,7 +17,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Installing
 
-First clone the Repo and install dependencies using yarn this way:
+First clone the Repo:
 
 ```
 $ git clone https://github.com/noelcperez/reactnativewithfluxtodoapp.git
