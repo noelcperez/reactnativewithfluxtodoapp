@@ -106,4 +106,144 @@ describe('App Reducer', () => {
     ).toEqual(stateAfter)
   });
 
+  it('Select Todo', () => {
+    const todoId = 1
+    const todoText = "Todo 1"
+    const stateBefore = {
+      ...initialState.app,
+      todos: [
+        ...initialState.app, {
+        id: todoId,
+        text: todoText,
+        done: false
+      },{
+        id: 2,
+        text: "Todo 2",
+        done: false
+      }]
+    }
+    const stateAfter = {
+      ...initialState.app,
+      selectedTodo: {
+        id: todoId,
+        text: todoText,
+        done: false
+      },
+      todos: [
+        ...initialState.app, {
+        id: todoId,
+        text: todoText,
+        done: false
+      },{
+        id: 2,
+        text: "Todo 2",
+        done: false
+      }]
+    }
+
+    const action = actions.selectTodo(todoId)
+
+    expect(
+      appReducer(stateBefore, action)
+    ).toEqual(stateAfter)
+
+  });
+
+  it('Edit Todo', () => {
+    const todoId = 1
+    const todoText = "Todo 1"
+    const updatedTodoText = "Todo updated"
+    const stateBefore = {
+      ...initialState.app,
+      todos: [
+        ...initialState.app, {
+        id: todoId,
+        text: todoText,
+        done: false
+      },{
+        id: 2,
+        text: "Todo 2",
+        done: false
+      }]
+    }
+    const stateAfter = {
+      ...initialState.app,
+      todos: [
+        ...initialState.app, {
+        id: todoId,
+        text: updatedTodoText,
+        done: false
+      },{
+        id: 2,
+        text: "Todo 2",
+        done: false
+      }]
+    }
+
+    const action = actions.editTodo(todoId, updatedTodoText)
+
+    expect(
+      appReducer(stateBefore, action)
+    ).toEqual(stateAfter)
+
+  });
+
+  it('Filter Todo', () => {
+    const filterString = "filter"
+
+    const stateBefore = {
+      ...initialState.app,
+      todos: [
+        ...initialState.app, {
+        id: 1,
+        text: "Todo filter",
+        done: false
+      },{
+        id: 2,
+        text: "Todo 2",
+        done: false
+      }]
+    }
+
+  const stateAfter = {
+    ...initialState.app,
+    todos: [
+      ...initialState.app, {
+      id: 1,
+      text: "Todo filter",
+      done: false
+    },{
+      id: 2,
+      text: "Todo 2",
+      done: false
+      }],
+    filteredTodos: [{
+      id: 1,
+      text: "Todo filter",
+      done: false
+    }]
+  }
+
+  const action = actions.filterTodos(filterString)
+
+  expect(
+    appReducer(stateBefore, action)
+  ).toEqual(stateAfter)
+
+  });
+
+  it('Toogle loading', () => {
+    const stateBefore = initialState.app
+    const stateAfter = {
+      ...initialState.app,
+      loading: true
+    }
+
+    const action = actions.toogleLoading()
+
+    expect(
+      appReducer(stateBefore, action)
+    ).toEqual(stateAfter)
+  });
+
 });

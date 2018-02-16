@@ -59,14 +59,16 @@ describe('Action Creators', () => {
 
   it('Edit Todo', () => {
     const todoId = 1
+    const todoText = 1
     const expectedAction = {
       type: constants.EDIT_TODO,
-      payload: todoId
+      todoId: todoId,
+      todoText: todoText
     }
 
 
     expect(
-      actions.editTodo(todoId)
+      actions.editTodo(todoId, todoText)
     ).toEqual(expectedAction)
   });
 
@@ -79,6 +81,16 @@ describe('Action Creators', () => {
 
     expect(
       actions.filterTodos(searchString)
+    ).toEqual(expectedAction)
+  });
+
+  it('Toogle Loading', () => {
+    const expectedAction = {
+      type: constants.TOOGLE_LOADING
+    }
+
+    expect(
+      actions.toogleLoading()
     ).toEqual(expectedAction)
   });
 });

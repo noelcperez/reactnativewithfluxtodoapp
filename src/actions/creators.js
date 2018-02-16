@@ -30,10 +30,11 @@ export const selectTodo = (todoId) => {
   }
 }
 
-export const editTodo = (todoId) => {
+export const editTodo = (todoId, todoText) => {
   return {
     type: constants.EDIT_TODO,
-    payload: todoId
+    todoId: todoId,
+    todoText: todoText
   }
 }
 
@@ -42,4 +43,10 @@ export const filterTodos = (filterString) => {
     type: constants.FILTER_TODO,
     payload: filterString
   }
-} 
+}
+
+export const toogleLoading = () => {
+  return {
+    type: constants.TOOGLE_LOADING
+  }
+}
