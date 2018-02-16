@@ -30,9 +30,9 @@ export default appReducer = (state = initialState.app, action) => {
       }
     case constants.REMOVE_TODO:
       return {
-       ...state,
-          todos: state.todos.filter(todo => {
-              return todo.id !== action.payload
+        ...state,
+        todos: state.todos.filter(todo => {
+          return todo.id !== action.payload
         })
       }
     case constants.SELECT_TODO:
@@ -48,32 +48,32 @@ export default appReducer = (state = initialState.app, action) => {
       }
       return state
     case constants.EDIT_TODO:
-    return {
-      ...state,
-      todos: state.todos.map(todo => {
-        if (todo.id !== action.todoId) {
-          return todo
-        }
+      return {
+        ...state,
+        todos: state.todos.map(todo => {
+          if (todo.id !== action.todoId) {
+            return todo
+          }
 
-        return {
-          ...todo,
-          text: action.todoText
-        }
-      })
-    }
+          return {
+            ...todo,
+            text: action.todoText
+          }
+        })
+      }
     case constants.FILTER_TODO:
-    const filteredTodos = state.todos.filter(todo => {
-      return todo.text.includes(action.payload)
-    })
-    return {
-      ...state,
-      filteredTodos: filteredTodos
-    }
+      const filteredTodos = state.todos.filter(todo => {
+        return todo.text.includes(action.payload)
+      })
+      return {
+        ...state,
+        filteredTodos: filteredTodos
+      }
     case constants.TOOGLE_LOADING:
       return {
         ...state,
-      loading: !state.loading  
-    }  
+        loading: !state.loading
+      }
     default:
       return state
   }

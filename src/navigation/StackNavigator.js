@@ -1,12 +1,12 @@
-import React from "react"
-import { StackNavigator } from "react-navigation"
+import React from 'react'
+import { StackNavigator } from 'react-navigation'
 
-import Home from '../components/Home'
-  
+import TodoListContainer from '../containers/TodoListContainer'
+
 const StackNavigation = StackNavigator({
-	Home: {
-		screen: Home,
-	}
+  TodoList: {
+    screen: TodoListContainer
+  }
 })
 
 export default StackNavigation
