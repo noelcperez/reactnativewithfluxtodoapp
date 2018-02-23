@@ -3,6 +3,11 @@ import initialState from '../initialState.json'
 
 export default appReducer = (state = initialState.app, action) => {
   switch (action.type) {
+    case constants.REPLACE_TODOS:
+      return {
+        ...state,
+        todos: action.payload
+      }
     case constants.ADD_TODO:
       return {
         ...state,

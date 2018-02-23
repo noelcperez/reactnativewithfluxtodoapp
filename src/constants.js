@@ -1,5 +1,6 @@
 
 export default constants = {
+  REPLACE_TODOS: "REPLACE_TODOS",
   ADD_TODO: "ADD_TODO",
   TOOGLE_TODO: "TOOGLE_TODO",
   REMOVE_TODO: "REMOVE_TODO",

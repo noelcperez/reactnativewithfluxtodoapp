@@ -1,5 +1,11 @@
 import constants from '../constants'
 
+export const replaceTodos = (todos) => {
+  return {
+    type: constants.REPLACE_TODOS,
+    payload: todos
+  }
+}
 
 export const addTodo = (id, todo) => {
   return {

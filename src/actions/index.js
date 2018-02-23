@@ -1,9 +1,11 @@
 import * as creators from './creators'
 import * as service from '../services'
 
-export const listenForTodoChanges = () => {
-  service.listenForAllTodosChange((todos) => {
-    
+export const listenForTodoChanges = () => dispatch => {
+  service.listenForAllTodosChanges(todos => {
+    dispatch(
+      creators.replaceTodos(todos)
+    )
   })
 }
 

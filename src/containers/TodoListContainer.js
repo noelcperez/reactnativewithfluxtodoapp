@@ -3,12 +3,14 @@ import TodoList from '../scenes/TodoList'
 import { listenForTodoChanges } from '../actions'
 
 const mapStateToProps = state => ({
-
+  todos: state.app.todos
 })
 
 const mapDispatchToProps = (dispatch) => ({
   listenForTodoChanges () {
-    listenForTodoChanges()
+    dispatch(
+      listenForTodoChanges()
+    )
   }
 })
 

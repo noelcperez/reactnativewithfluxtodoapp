@@ -1,17 +1,30 @@
 import React, { Component } from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, SafeAreaView } from 'react-native'
+import { Container, Content, List, ListItem, Body, Text } from 'native-base'
 
 class TodoList extends Component {
   componentDidMount () {
     this.props.listenForTodoChanges()
   }
-  render () {
+
+  _listItemRenderRow = (todo) => {
+		return (
+					<ListItem>
+            <Body>
+              <Text style={{ fontSize: 18 }}>{`${todo.text}`}</Text>
+            </Body>
+					</ListItem>
+				)
+	}
+  render() {
+    const { todos } = this.props
     return (
-      <View style={styles.container}>
-        <Text>Open up App.js to start working on your app!</Text>
-        <Text>Changes you make will automatically reload.</Text>
-        <Text>Shake your phone to open the developer menu.</Text>
-      </View>
+      <SafeAreaView style={styles.container}>
+        <Content>
+          <Text>Hi</Text>  
+          <List style={{flex: 1}} dataArray={todos} renderRow={ this._listItemRenderRow } />
+        </Content>
+      </SafeAreaView>
     )
   }
 }
