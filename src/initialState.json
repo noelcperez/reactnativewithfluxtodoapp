@@ -1,0 +1,9 @@
+{
+  "app": {
+    "todos": [],
+    "loading": false,
+    "filteredTodos":[],
+    "selectedTodo": {}
+  },
+  "nav": null
+}
