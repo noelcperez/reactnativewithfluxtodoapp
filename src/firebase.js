@@ -2,12 +2,12 @@ import firebase from 'firebase'
 
 // Initialize Firebase
 var config = {
-  apiKey: '',
-  authDomain: '',
-  databaseURL: '',
-  projectId: '',
+  apiKey: 'AIzaSyCZilHiDEBQsa51h7-hhsOYFOuSMkmnfeE',
+  authDomain: 'reactnativetodo-fd621.firebaseapp.com',
+  databaseURL: 'https://reactnativetodo-fd621.firebaseio.com',
+  projectId: 'reactnativetodo-fd621',
   storageBucket: '',
-  messagingSenderId: ''
+  messagingSenderId: '630391448503'
 }
 
 firebase.initializeApp(config)
