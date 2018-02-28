@@ -2,8 +2,7 @@
 Sample project presenting a react native App for iOS and Android using Redux arquitecture.
 
 ## Version
-
-1.0
+1.0.1
 
 ## Build and Runtime Requirements
 + Xcode 8.0 or later
@@ -12,19 +11,17 @@ Sample project presenting a react native App for iOS and Android using Redux arq
 
 
 ## The Published App
-The App is publish to be used as is in expo website. This is the URL:
+The App is publish to be used "as is" in expo website. This is the URL:
 
 * [Todo List](https://expo.io/@nperezd2006/reactnativewithfluxtodo) - Todo List
 
 
 
 ## Getting Started
-
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
 
 ### Installing
-
 First clone the Repo:
 
 ```
