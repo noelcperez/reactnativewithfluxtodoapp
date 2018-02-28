@@ -95,6 +95,7 @@ $ exp publish
 * [Native Base](https://docs.nativebase.io) - Component Suite
 * [Expo](https://docs.expo.io/versions/latest/index.htmlo) - Development Environment
 * [Create React Native App](https://github.com/react-community/create-react-native-app) - Bootstrapper
+* [React Navigation](https://reactnavigation.org/docs/getting-started.html) - Navigation library
 
 
 ## Author
